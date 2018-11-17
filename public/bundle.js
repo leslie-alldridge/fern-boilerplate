@@ -1737,7 +1737,7 @@ var _reducers = __webpack_require__(50);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
-var _App = __webpack_require__(52);
+var _App = __webpack_require__(53);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -25638,7 +25638,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _types = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../actions/types\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var _types = __webpack_require__(52);
 
 exports.default = function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "loading";
@@ -25662,6 +25662,18 @@ exports.default = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var FETCH_FEATURES = exports.FETCH_FEATURES = "FETCH_FEATURES";
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -25669,7 +25681,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Header = __webpack_require__(53);
+var _Header = __webpack_require__(54);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -25712,7 +25724,7 @@ var App = function (_React$Component) {
 exports.default = App;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
