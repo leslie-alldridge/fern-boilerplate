@@ -1,5 +1,6 @@
 import { featuresRef, authRef, provider } from "./config/firebase";
 import { FETCH_FEATURES } from "./types";
+import "babel-polyfill";
 
 export const fetchItems = () => async dispatch => {
   featuresRef.on("value", snapshot => {
