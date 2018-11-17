@@ -1,36 +1,22 @@
 const path = require("path");
-const entryFile = path.resolve(__dirname, "src", "client", "index.js");
-const outputDir = path.resolve(__dirname, "public");
-const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  plugins: [new Dotenv()],
-  entry: ["babel-polyfill", entryFile],
+  entry: "./src/client/index.js",
   output: {
-    filename: "bundle.js",
-    path: outputDir
+    path: path.join(__dirname, "/public"),
+    filename: "bundle.js"
   },
   module: {
-    rules: [
+    loaders: [
       {
-        test: /\.(js|jsx)$/,
         loader: "babel-loader",
+        test: /\.jsx?$/,
         exclude: /node_modules/
-      },
-      {
-        test: /\.(scss|css)$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "sass-loader"
-          }
-        ]
       }
     ]
-  }
+  },
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
+  devtool: "source-map"
 };

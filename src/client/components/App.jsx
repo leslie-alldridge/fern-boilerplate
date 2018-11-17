@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import Header from "./Header";
 
 class App extends React.Component {
   constructor(props) {
@@ -10,13 +10,10 @@ class App extends React.Component {
     return (
       <div>
         <p>React is live here!</p>
+        <Header />
       </div>
     );
   }
 }
 
 export default App;
-
-ReactDOM.render(<App />, document.getElementById("app"));
-
-module.hot.accept();
