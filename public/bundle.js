@@ -31905,7 +31905,7 @@ Object.defineProperty(exports, "__esModule", {
 var _types = __webpack_require__(112);
 
 exports.default = function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "loading";
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments[1];
 
   switch (action.type) {
@@ -32055,6 +32055,8 @@ var Header = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(this.props);
+
       return _react2.default.createElement(
         "div",
         null,
@@ -32067,6 +32069,21 @@ var Header = function (_React$Component) {
           "button",
           { onClick: this.fetch },
           "Fetch Items"
+        ),
+        _react2.default.createElement(
+          "ul",
+          null,
+          this.props.data && this.props.data.map(function (item) {
+            return _react2.default.createElement(
+              "li",
+              { key: item.id },
+              item.id,
+              ": ",
+              item.title,
+              " ",
+              item.userId
+            );
+          })
         )
       );
     }
@@ -77405,21 +77422,20 @@ registerStorage(__WEBPACK_IMPORTED_MODULE_0__firebase_app___default.a);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var FirebaseConfig = exports.FirebaseConfig = {
   //firebase object goes here
-  apiKey: process.env.apiKey,
+  apiKey: "AIzaSyB44nX5trQEuFS-ix7lr4YB0kJUn9bV9-A",
   authDomain: "boilerplate-ed996.firebaseapp.com",
   databaseURL: "https://boilerplate-ed996.firebaseio.com",
   projectId: "boilerplate-ed996",
   storageBucket: "boilerplate-ed996.appspot.com",
   messagingSenderId: "57924946716"
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
 /* 200 */

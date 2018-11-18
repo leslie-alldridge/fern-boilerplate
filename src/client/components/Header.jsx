@@ -14,10 +14,22 @@ class Header extends React.Component {
   }
 
   render() {
+    console.log(this.props);
+
     return (
       <div>
         <h1>Hello from Components!</h1>
         <button onClick={this.fetch}>Fetch Items</button>
+        <ul>
+          {this.props.data &&
+            this.props.data.map(item => {
+              return (
+                <li key={item.id}>
+                  {item.id}: {item.title} {item.userId}
+                </li>
+              );
+            })}
+        </ul>
       </div>
     );
   }

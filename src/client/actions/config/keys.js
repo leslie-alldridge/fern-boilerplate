@@ -1,6 +1,6 @@
 export const FirebaseConfig = {
   //firebase object goes here
-  apiKey: process.env.apiKey,
+  apiKey: "key goes here",
   authDomain: "boilerplate-ed996.firebaseapp.com",
   databaseURL: "https://boilerplate-ed996.firebaseio.com",
   projectId: "boilerplate-ed996",
